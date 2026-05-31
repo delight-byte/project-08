@@ -58,3 +58,43 @@ To feed the predictive brain (`XGBoost`), raw telemetry parameters were transfor
 * **`Engine_RPM`:** Captures raw powertrain stress and mechanical efficiency across different sectors of the circuit.
 * **`Track_Temp_Celsius`:** Monitors real-time ambient track conditions, which directly influence tyre thermal degradation and optimal brake-cooling windows.
 * **Relative Distance & Sector Splits:** Standardized features mapping spatial positioning to eliminate structural noise across different track layouts.
+
+---
+
+## 📊 Performance Results & Model Fidelity Convergence
+
+The deployment of the hyperparameter-tuned `XGBoost Regressor` alongside the `SMOTE` data pipeline yielded massive predictive upgrades. 
+
+* **Error Minimization:** The baseline model started with a high variance **RMSE of 1.52**. Through structural fine-tuning and loss convergence optimization over 500 decision trees, the production-ready model achieved an **RMSE of 1.18**. This represents a **~22.3% boost** in absolute accuracy.
+* **Loss Tracking:** The model's learning journey follows a stable gradient descent path, proving that the algorithm successfully captured the non-linear degradation curves of the telemetry features without overfitting.
+
+---
+
+## 🖥️ Interactive Power BI Dashboard Showcase
+
+The frontend layer is built as an elite, dark-themed **Strategy Analytics & ML Model Fidelity Console** designed to mimic real-world pit-wall telemetry systems.
+
+### 🚨 How to Insert Your Screenshot
+> 💡 *To display your stunning dashboard image here, name your screenshot file as `dashboard_screenshot.jpg`, upload it directly to your GitHub repository root, and it will automatically render below!*
+
+![Formula 1 Telemetry Dashboard Console](dashboard_screenshot.jpg)
+
+### Key Dashboard Control Panels:
+1. **Model Fidelity Console (Top Left):** Houses the structured ML blueprint and live architecture documentation, giving instant clarity to technical stakeholders.
+2. **Hyperparameter Sensitivity Matrix (Top Middle):** A dynamic heat-grid mapping out the exact sweet spot where Tree Depth and Learning Rates yield the lowest error margins.
+3. **Actual vs. Predicted Lap Time (Middle Left):** A synchronized line chart tracking real-time convergence between the AI’s estimations and the actual performance on the circuit.
+4. **Driver Performance Analytics (Bottom Half):** Features custom multi-gauge telemetry parameters tracking `Full_Throttle_Pct` (60.66%) and `Braking_Distance_Pct` (15.82%), linked directly to a dynamic, spatial Speed Heatmap of the racing circuit.
+
+---
+
+## 🛠️ Tech Stack & Tooling
+* **Language:** Python 3.x (Pandas, NumPy, Scikit-Learn, XGBoost, SMOTE)
+* **Business Intelligence:** Microsoft Power BI (Advanced DAX Engine)
+* **Environment:** Jupyter Notebook / Production Scripts
+
+---
+
+## 📂 How to Explore this Repository
+* `/code` — Contains the Jupyter notebooks used for data preparation, SMOTE balancing, and model training.
+* `/dashboard` — Houses the template file for the Power BI dynamic UI.
+* `/data` — Sample baseline race telemetry data configuration.
