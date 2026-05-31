@@ -35,3 +35,26 @@ The system is split into three core layers: raw machine learning execution, synt
 ### 3. BI Integration & Diagnostics
 * **Engine Connection:** `Context-Aware DAX` — High-fidelity backend formulas linking Power BI’s dynamic UI filters with the model's prediction matrix synchronously.
 * **Telemetry Map:** `Loss Convergence Tracker` — A visual telemetry log mapping exactly how the AI steadily minimized its error metrics over 500 iterations.
+
+* ---
+
+## 🎯 The Core Problem & Racing Domain Context
+
+In Formula 1, race strategy is dictated by high-frequency, non-linear telemetry data. Predicting lap times accurately is a notorious data science challenge due to two massive real-world constraints:
+
+1. **Severe Dataset Imbalance:** Optimal racing conditions (dry tracks, fresh soft tyres, clear air) yield thousands of data points. Conversely, critical high-variance scenarios—such as extreme tyre degradation spikes, sudden track temperature shifts, and irregular out-lap telemetry—are highly underrepresented. A standard model trained on this data becomes heavily biased toward average laps and fails completely during critical race pit-window decisions.
+2. **Multi-Dimensional Telemetry Shifts:** Features like tyre age do not degrade linearly. The interaction between track temperature, engine RPM, and physical tyre wear creates complex, stochastic variance that traditional regression models cannot reliably capture.
+
+### The Solution
+This project tackles dataset skewness head-on by implementing a **SMOTE (Synthetic Minority Over-sampling Technique) Balance Pipeline** to synthetically simulate underrepresented high-variance racing laps. By expanding our baseline from **18,450 to 24,600 balanced laps**, the predictive backend safely handles edge-case race telemetry without memorizing or overfitting.
+
+---
+
+## ⚙️ Data Engineering & Feature Architecture
+
+To feed the predictive brain (`XGBoost`), raw telemetry parameters were transformed into highly predictive, engineered features. The top operational drivers built into this model include:
+
+* **`Tyre_Age_Delta` (Critical Driver):** Tracks the cumulative degradation coefficient per lap. This serves as the primary non-linear feature for calculating grip-loss curves.
+* **`Engine_RPM`:** Captures raw powertrain stress and mechanical efficiency across different sectors of the circuit.
+* **`Track_Temp_Celsius`:** Monitors real-time ambient track conditions, which directly influence tyre thermal degradation and optimal brake-cooling windows.
+* **Relative Distance & Sector Splits:** Standardized features mapping spatial positioning to eliminate structural noise across different track layouts.
