@@ -7,7 +7,7 @@ An end-to-end Machine Learning and Business Intelligence solution designed to pr
 
 ---
 
-## 📈 Executive Project Performance
+## Executive Project Performance
 
 Before diving into the architecture, here is the direct business and technical impact of the optimization pipeline:
 
@@ -19,19 +19,19 @@ Before diving into the architecture, here is the direct business and technical i
 
 ---
 
-## 🧠 Core Architecture & ML Blueprint
+## Core Architecture & ML Blueprint
 
 The system is split into three core layers: raw machine learning execution, synthetic telemetry data engineering, and interactive context-aware validation.
 
 ### 1. ML Core Architecture
-* **Algorithm:** Gradient Boosted Decision Trees (`XGBoost Regressor`) — *The Predictive Brain driving high-speed lap estimations.*
-* **Objective Function:** Mean Squared Error (`reg:squarederror`) — *Mathematical target used to force prediction errors down toward zero.*
-* **Aero-Calibration:** `500 Trees | Learning Rate: 0.05 | Depth: 8` — *The hyperparameter sweet-spot discovered via extensive Grid Search.*
+* **Algorithm:** Gradient Boosted Decision Trees (`XGBoost Regressor`) — The Predictive Brain driving high-speed lap estimations.
+* **Objective Function:** Mean Squared Error (`reg:squarederror`) — Mathematical target used to force prediction errors down toward zero.
+* **Aero-Calibration:** `500 Trees | Learning Rate: 0.05 | Depth: 8` — The hyperparameter sweet-spot discovered via extensive Grid Search.
 
 ### 2. Data & Validation Pipeline
-* **Feature Optimization:** `SMOTE Balance` — *Synthetic Minority Over-sampling Technique used to eliminate dataset variance, ensuring the AI learns all track conditions equally.*
-* **Testing Split:** `80:20 Train-Test Ratio` — *Rigorous data segmentation ensuring zero data leakage and a rock-solid validation standard.*
+* **Feature Optimization:** `SMOTE Balance` — Synthetic Minority Over-sampling Technique used to eliminate dataset variance, ensuring the AI learns all track conditions equally.
+* **Testing Split:** `80:20 Train-Test Ratio` — Rigorous data segmentation ensuring zero data leakage and a rock-solid validation standard.
 
 ### 3. BI Integration & Diagnostics
-* **Engine Connection:** `Context-Aware DAX` — *High-fidelity backend formulas linking Power BI’s dynamic UI filters with the model's prediction matrix synchronously.*
-* **Telemetry Map:** `Loss Convergence Tracker` — *A visual telemetry log mapping exactly how the AI steadily minimized its error metrics over 500 iterations.*
+* **Engine Connection:** `Context-Aware DAX` — High-fidelity backend formulas linking Power BI’s dynamic UI filters with the model's prediction matrix synchronously.
+* **Telemetry Map:** `Loss Convergence Tracker` — A visual telemetry log mapping exactly how the AI steadily minimized its error metrics over 500 iterations.
