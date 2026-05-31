@@ -11,7 +11,7 @@ An end-to-end Machine Learning and Business Intelligence solution designed to pr
 
 <img width="1835" height="1042" alt="image" src="https://github.com/user-attachments/assets/0a193f3c-efc2-4e56-8dd5-9e14a28c1b70" />
 
-## Executive Project Performance
+### Executive Project Performance
 
 Before diving into the architecture, here is the direct business and technical impact of the optimization pipeline:
 
@@ -21,7 +21,7 @@ Before diving into the architecture, here is the direct business and technical i
 | **Data Volume Balanced** | 18,450 Laps | **24,600 Laps** | **SMOTE Variance Control** |
 | **Prediction Latency** | -- | **< 45ms** | **Real-Time UI Responsiveness** |
 
-## Core Architecture & ML Blueprint
+### Core Architecture & ML Blueprint
 
 The system is split into three core layers: raw machine learning execution, synthetic telemetry data engineering, and interactive context-aware validation.
 
@@ -38,7 +38,7 @@ The system is split into three core layers: raw machine learning execution, synt
 * **Engine Connection:** `Context-Aware DAX` — High-fidelity backend formulas linking Power BI’s dynamic UI filters with the model's prediction matrix synchronously.
 * **Telemetry Map:** `Loss Convergence Tracker` — A visual telemetry log mapping exactly how the AI steadily minimized its error metrics over 500 iterations.
 
-## The Core Problem & Racing Domain Context
+### The Core Problem & Racing Domain Context
 
 In Formula 1, race strategy is dictated by high-frequency, non-linear telemetry data. Predicting lap times accurately is a notorious data science challenge due to two massive real-world constraints:
 
@@ -48,7 +48,7 @@ In Formula 1, race strategy is dictated by high-frequency, non-linear telemetry 
 ### The Solution
 This project tackles dataset skewness head-on by implementing a **SMOTE (Synthetic Minority Over-sampling Technique) Balance Pipeline** to synthetically simulate underrepresented high-variance racing laps. By expanding our baseline from **18,450 to 24,600 balanced laps**, the predictive backend safely handles edge-case race telemetry without memorizing or overfitting.
 
-## Data Engineering & Feature Architecture
+### Data Engineering & Feature Architecture
 
 To feed the predictive brain (`XGBoost`), raw telemetry parameters were transformed into highly predictive, engineered features. The top operational drivers built into this model include:
 
@@ -57,7 +57,7 @@ To feed the predictive brain (`XGBoost`), raw telemetry parameters were transfor
 * **`Track_Temp_Celsius`:** Monitors real-time ambient track conditions, which directly influence tyre thermal degradation and optimal brake-cooling windows.
 * **Relative Distance & Sector Splits:** Standardized features mapping spatial positioning to eliminate structural noise across different track layouts.
 
-## Interactive Power BI Dashboard Showcase
+### Interactive Power BI Dashboard Showcase
 
 The frontend layer is built as an elite, dark-themed **Strategy Analytics & ML Model Fidelity Console** designed to mimic real-world pit-wall telemetry systems.
 
@@ -67,12 +67,12 @@ The frontend layer is built as an elite, dark-themed **Strategy Analytics & ML M
 3. **Actual vs. Predicted Lap Time (Middle Left):** A synchronized line chart tracking real-time convergence between the AI’s estimations and the actual performance on the circuit.
 4. **Driver Performance Analytics (Bottom Half):** Features custom multi-gauge telemetry parameters tracking `Full_Throttle_Pct` (60.66%) and `Braking_Distance_Pct` (15.82%), linked directly to a dynamic, spatial Speed Heatmap of the racing circuit.
 
-## Tech Stack & Tooling
+### Tech Stack & Tooling
 * **Language:** Python 3.x (Pandas, NumPy, Scikit-Learn, XGBoost, SMOTE)
 * **Business Intelligence:** Microsoft Power BI (Advanced DAX Engine)
 * **Environment:** Jupyter Notebook / Production Scripts
 
-## How to Explore this Repository
+### How to Explore this Repository
 * `/code` — Contains the Jupyter notebooks used for data preparation, SMOTE balancing, and model training.
 * `/dashboard` — Houses the template file for the Power BI dynamic UI.
 * `/data` — Sample baseline race telemetry data configuration.
