@@ -1,7 +1,7 @@
 # Project-08: Strategy Analytics & ML Model Fidelity Console
 f1-predictive-telemetry-analytics: An end-to-end XGBoost &amp; Power BI solution for Formula 1 race strategy optimization.
 
-# Predictive Telemetry Analytics & Race Strategy Optimization 
+### Predictive Telemetry Analytics & Race Strategy Optimization 
 
 An end-to-end Machine Learning and Business Intelligence solution designed to process high-frequency Formula 1 race telemetry, balance highly skewed time-series datasets, and deliver real-time lap-time predictions through an enterprise-grade Power BI dashboard.
 
